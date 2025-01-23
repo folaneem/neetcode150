@@ -4,13 +4,18 @@ from collections import defaultdict
 def solution(board):
     columns = defaultdict(set)
     rows = defaultdict(set)
+    square = defaultdict(set)
 
     for row in range(9):
         for col in range(9):
-            if board[row][col] in rows[row] or board[col][row] in columns[col]:
+            cell = board[row][col]
+            if cell == '.':
+                continue
+            if cell in columns[col] or cell in rows[row] or cell in square[(row // 3, col // 3)]:
                 return False
-            rows[row].add(board[row][col])
-            columns[col].add(board[col][row])
+            columns[col].add(cell)
+            rows[row].add(cell)
+            square[(row // 3, col // 3)].add(cell)
     return True
 
 
