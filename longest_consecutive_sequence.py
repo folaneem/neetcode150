@@ -1,5 +1,7 @@
 def longest_consecutive_sequence(nums):
     nums = sorted(set(nums))
+    if len(nums) == 1:
+        return 1
     print(nums)
     counter = 1
     result = 0
@@ -17,4 +19,5 @@ def longest_consecutive_sequence(nums):
 
 
 if __name__ == '__main__':
-    print(longest_consecutive_sequence(nums=[2, 20, 21, 22, 23, 24, 25, 26, 27, 28, 4, 10, 3, 4, 5]))
+    nums = [2, 20, 21, 22, 23, 24, 25, 26, 27, 28, 4, 10, 3, 4, 5]
+    print(longest_consecutive_sequence(nums=[0, 1]))
