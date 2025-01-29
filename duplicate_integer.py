@@ -5,7 +5,7 @@ nums = [1, 2, 3, 3]
 
 def solution(nums):
     unique_nums = set(nums)
-    return len(nums) == len(unique_nums)
+    return len(nums) != len(unique_nums)
 
 
 if __name__ == '__main__':
