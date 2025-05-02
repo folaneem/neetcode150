@@ -1,8 +1,7 @@
 from binascii import b2a_hex
 from typing import Optional
 
-from linked_list.linked_list_cycle import ListNode
-from linked_list.merge_two_sorted_list import print_linked_list, create_linked_list
+from linked_list.utils import print_linked_list, create_linked_list, ListNode
 
 
 def removeNthFromEnd(head: Optional[ListNode], n: int) -> Optional[ListNode]:

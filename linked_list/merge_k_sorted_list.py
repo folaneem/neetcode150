@@ -1,4 +1,4 @@
-from linked_list.reverse_linked_list import ListNode
+from linked_list.utils import ListNode
 
 
 def merge_k_sorted_list(lists):

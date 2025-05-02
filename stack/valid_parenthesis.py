@@ -11,4 +11,4 @@ def is_valid_parentheses(s):
         return True
     return False
 if __name__ == '__main__':
-    print(is_valid_parentheses(s="[(]"))
+    print(is_valid_parentheses(s="[()]"))

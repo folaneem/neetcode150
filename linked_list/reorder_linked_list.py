@@ -1,12 +1,6 @@
 from typing import Optional
 
-from merge_two_sorted_list import print_linked_list, create_linked_list
-
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from linked_list.utils import print_linked_list, create_linked_list, ListNode
 
 
 def reorderList(head: Optional[ListNode]) -> None:

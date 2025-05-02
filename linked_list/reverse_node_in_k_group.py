@@ -1,6 +1,6 @@
 from typing import Optional
 
-from linked_list.merge_two_sorted_list import create_linked_list, print_linked_list, ListNode
+from linked_list.utils import print_linked_list, ListNode
 
 
 def reverseKGroup(head: Optional[ListNode], k: int) -> Optional[ListNode]:

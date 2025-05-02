@@ -1,7 +1,4 @@
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from linked_list.utils import ListNode
 
 
 def reverseList(head):
@@ -14,10 +11,11 @@ def reverseList(head):
         prev = curr
     return prev
 
-three = ListNode(val=3, next=None)
-two = ListNode(val=2, next=three)
-one = ListNode(val=1, next=two)
-zero = ListNode(val=0, next=one)
+
+three = ListNode(value=3, next=None)
+two = ListNode(value=2, next=three)
+one = ListNode(value=1, next=two)
+zero = ListNode(value=0, next=one)
 
 result = reverseList(head=zero)
 print()

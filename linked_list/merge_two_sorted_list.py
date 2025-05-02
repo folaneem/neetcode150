@@ -1,7 +1,5 @@
-class ListNode:
-    def __init__(self, value=0, next=None):
-        self.value = value
-        self.next = next
+from linked_list.utils import ListNode, create_linked_list, print_linked_list
+
 
 def merge_sorted_linked_lists(l1, l2):
     # Create a dummy node to simplify handling of the new list
@@ -25,24 +23,6 @@ def merge_sorted_linked_lists(l1, l2):
         current.next = l2
 
     return dummy.next
-
-
-# Helper functions to create and print linked lists
-def create_linked_list(values):
-    dummy = ListNode()
-    current = dummy
-    for value in values:
-        current.next = ListNode(value)
-        current = current.next
-    return dummy.next
-
-
-def print_linked_list(head):
-    values = []
-    while head:
-        values.append(head.value)
-        head = head.next
-    print(" -> ".join(map(str, values)))
 
 
 if __name__ == '__main__':

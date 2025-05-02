@@ -1,18 +1,17 @@
 # Floyed Tortoise and Hare (Slow and Fast Pointers)
 from typing import Optional
 
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from linked_list.utils import ListNode
 
 
 def hasCycle(head: Optional[ListNode]) -> bool:
-    fast, slow = head, head
+    slow, fast = head, head
+
     while fast and fast.next:
         fast = fast.next.next
         slow = slow.next
-        if fast == slow:
+
+        if slow == fast:
             return True
+
     return False

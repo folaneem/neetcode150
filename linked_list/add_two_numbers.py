@@ -1,12 +1,6 @@
 from typing import Optional
 
-from linked_list.merge_two_sorted_list import print_linked_list, create_linked_list
-
-
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+from linked_list.utils import ListNode, create_linked_list, print_linked_list
 
 
 def addTwoNumbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
@@ -17,8 +11,8 @@ def addTwoNumbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[Li
 
     carry_over = 0
     while rev_l1 or rev_l2 or carry_over:
-        val1 = rev_l1.val if rev_l1 else 0
-        val2 = rev_l2.val if rev_l2 else 0
+        val1 = rev_l1.value if rev_l1 else 0
+        val2 = rev_l2.value if rev_l2 else 0
 
         addition = val1 + val2 + carry_over
         left_over = addition % 10

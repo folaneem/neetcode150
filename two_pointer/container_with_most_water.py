@@ -1,15 +1,20 @@
 def solution(height):
-    res = 0
-    left, right = 0, len(height)-1
-    while left < right:
-        area = min(height[left], height[right]) * (right - left)
-        res = max(res, area)
-        if height[left] < height[right]:
-            left +=1
-        elif height[right] <= height[left]:
-            right -=1
-    return res
+    l, r = 0, len(height) - 1
+    result = float("-inf")
+    while l < r:
+        lh = height[l]
+        rh = height[r]
+
+        area = lh * rh
+
+        if lh > rh:
+            r -= 1
+        else:
+            l += 1
+        result = max(result, area)
+
+    return result
 
 
 if __name__ == "__main__":
-    print(solution(height=[1,7,2,5,4,7,3,6]))
+    print(solution(height=[1, 7, 2, 5, 4, 7, 3, 6]))
